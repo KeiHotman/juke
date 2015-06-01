@@ -1,0 +1,88 @@
+body {
+  background-image: url(/image/background.jpg);
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+  background-color: #000;
+}
+
+.btn {
+  height: 37px;
+  background-color: rgba(255, 255, 255, 0.8);
+}
+
+.header {
+  height: 350px;
+  position: relative;
+  overflow: hidden;
+}
+
+.main h1 {
+  font-size: 500%;
+  text-align: center;
+  color: white;
+  font-family: 'Poiret One', cursive;
+}
+
+p.subtext {
+  text-align: center;
+  color: white;
+  font-family: 'Dosis', sans-serif;
+}
+
+.body-mask {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  background-color: rgba(0, 0, 0, 0.1);
+  /* background-color: rgba(6, 226, 231, 0.1); */
+}
+
+#footer {
+  font-size: 60%;
+  color: #AAA;
+  margin-bottom: 10px;
+  text-align: center;
+  bottom: 0;
+  width:100%;
+  position: fixed;
+}
+
+.wrapper{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.main {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  margin: auto;
+  width: auto;
+  max-width: 250px;
+  height: auto;
+  max-height: 300px;
+}
+
+input.form-control {
+  border-color: rgba(255, 255, 255, 0.8);
+  color: white;
+  background-color: rgba(0, 0, 0, 0.8);
+}
+/*for Webkit*/
+input::-webkit-input-placeholder {
+    color: #FFF;
+}
+/*for Firefox*/
+input::-moz-placeholder {
+    color: #FFF;
+}

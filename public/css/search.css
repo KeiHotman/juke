@@ -1,0 +1,147 @@
+body {
+  padding-top: 55px;
+}
+
+body {
+  background-image: url(/image/background.jpg);
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+  background-color: #000;
+}
+
+button.add {
+  border-radius: 0;
+  background-color: rgba(6, 226, 231, 0.8);
+  color: rgba(255, 255, 255, 0.9);
+}
+
+button#search {
+  height: 37px;
+  background-color: rgba(255, 255, 255, 0.8);
+}
+
+#search-nav {
+  width: 100%;
+  box-shadow: 0px 3px 3px -3px rgba(0,0,0,0.6);
+  -webkit-box-shadow: 0px 3px 3px -3px rgba(0,0,0,0.6);
+  -moz-box-shadow: 0px 3px 3px -3px rgba(0,0,0,0.6);
+  position: fixed;
+  top: 0px;
+  background-color: rgba(0, 0, 0, 0.8);
+  height: auto;
+  z-index: 10;
+}
+
+.container {
+  max-width: 500px;
+  padding-left: 0;
+  padding-right: 0;
+}
+
+/*検索部分*/
+input.form-control {
+  border-color: rgba(255, 255, 255, 0.8);
+  color: white;
+  background-color: rgba(0, 0, 0, 0);
+}
+/*for Webkit*/
+input::-webkit-input-placeholder {
+    color: #FFF;
+}
+/*for Firefox*/
+input::-moz-placeholder {
+    color: #FFF;
+}
+
+#search-nav form {
+  padding: 0;
+  margin: 5px;
+}
+
+.panel-default {
+  background-color: rgba(0, 0, 0, 0);
+  border: 0;
+  box-shadow: 0px 6px 3px -3px rgba(0,0,0,0.6);
+  -webkit-box-shadow: 0px 6px 3px -3px rgba(0,0,0,0.6);
+  -moz-box-shadow: 0px 6px 3px -3px rgba(0,0,0,0.6);
+}
+
+.panel-body {
+  background-color: rgba(0, 0, 0, 0.8);
+  padding: 0;
+}
+
+.thumb {
+  margin-bottom: 10px;
+}
+
+.panel-body .title {
+  font-size: 1.2em;
+  color: white;
+  font-weight: bold;
+  padding: 0 10px;
+  margin-bottom: 10px;
+}
+
+.length {
+  padding-left: 10px;
+  margin-bottom: 10px;
+  font-size: 80%;
+  color: white;
+  line-height: inherit;
+}
+.length .glyphicon {
+  margin-right: 4px;
+}
+#footer {
+  font-size: 60%;
+  color: #666;
+  margin-top: 5px;
+  margin-bottom: 5px;
+  text-align: center;
+  top: 40%;
+}
+
+#loader {
+  display: none;
+  z-index: 100;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+	position: fixed;
+	width: 30px; /*ローディングアイコンの横サイズ*/
+	height: 30px; /*ローディングアイコンの縦サイズ*/
+	border-radius: 30px;  /*CSS3で円を書く*/
+	border: 8px solid #17cddd;  /*円に枠をつける*/
+	border-right-color: transparent; /*円の右にC状の空きをつける*/
+
+	-webkit-animation: spin 1s infinite linear; /*回転のアニメーションをつける*/
+	-moz-animation: spin 1s infinite linear;
+}
+
+/*キーフレームのアニメーションをつける*/
+@-webkit-keyframes spin {
+	0% { -webkit-transform: rotate(0deg); opacity: 0.4; }
+	50%  { -webkit-transform: rotate(180deg); opacity: 1; }
+	100%   { -webkit-transform: rotate(360deg); opacity: 0.4; }
+}
+
+@-moz-keyframes spin {
+	0% { -moz-transform: rotate(0deg); opacity: 0.4; }
+	50%  { -moz-transform: rotate(180deg); opacity: 1; }
+	100%   { -moz-transform: rotate(360deg); opacity: 0.4; }
+}
+
+#backdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(255, 255, 255, 0.3);
+  display: none;
+}

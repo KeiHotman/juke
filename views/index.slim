@@ -1,0 +1,31 @@
+doctype html
+html lang="ja"
+  head
+    title juke
+    meta charset="utf-8"
+    meta http-equiv="X-UA-Compatible" content="IE=edge"
+    meta name="viewport" content="width=device-width, initial-scale=1"
+
+    link href="css/bootstrap.min.css" rel="stylesheet"
+    link href="css/main.css" rel="stylesheet"
+    link href='http://fonts.googleapis.com/css?family=Poiret+One' rel='stylesheet' type='text/css'
+    link href='http://fonts.googleapis.com/css?family=Dosis:200' rel='stylesheet' type='text/css'
+  body
+    .body-mask
+    .wrapper
+      .main
+        h1 juke
+        p.subtext What's your favorite music?
+        br
+        form method="GET" action="/search"
+          .input-group
+            input.form-control type="text" name="keyword" placeholder="曲を検索"
+            span.input-group-btn
+              button.btn type="submit" aria-label="Left Align"
+                span class="glyphicon glyphicon-search" aria-hidden="true"
+    #footer
+      footer Copyright © 2015 @FromAtom, @RinKeiHotman
+
+
+    script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"
+    script src="js/bootstrap.min.js"
