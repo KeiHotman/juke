@@ -10,6 +10,7 @@ require 'youtube_it'
 API_KEY = ENV['YOUTUBE_API_KEY']
 USER_NAME = ENV['YOUTUBE_USER_NAME']
 PASSWORD = ENV['YOUTUBE_USER_PASSWORD']
+PLAYLIST_NAME = ENV['YOUTUBE_PLAYLIST_NAME']
 
 get '/' do
   slim :index
@@ -29,9 +30,11 @@ end
 
 post '/add' do
   video_id = @params["video_id"]
-  p video_id
+
   client = YouTubeIt::Client.new(:username => USER_NAME, :password => PASSWORD, :dev_key => API_KEY)
-  target_playlist = client.playlists.find { |playlist| playlist.title == 'party' }
+  target_playlist = client.playlists.find { |playlist| playlist.title == PLAYLIST_NAME }
+  redirect unless target_playlist
+
   target_id = target_playlist.playlist_id
   client.add_video_to_playlist(target_id, video_id)
 
